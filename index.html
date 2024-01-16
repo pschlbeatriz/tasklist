@@ -3,51 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        @font-face {
+            font-family: 'header-font';
+            src: url('./fonts/Blueberry.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'button-header-font';
+            src: url('./fonts/PlaypenSans-VariableFont_wght.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'h2-font';
+            src: url('./fonts/PlaypenSans-Bold.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'p-grid-font';
+            src: url('./fonts/PlaypenSans-VariableFont_wght.ttf') format('truetype');
+        }
+
+        body {
+            background-color: #f5dec4;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-header {
+            background-color: #ddaa8d;
+            color: #fff;
+            padding: 5px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+        .logo-placeholder {
+            /* Add your logo styling here */
+            margin-bottom: 10px;
+            display: flex;
+        }
+
+        h1{
+            font-family: "header-font";
+            font-size: 26px; /* Adjust the font size */
+            line-height: 1;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .signup-btn, .signin-btn {
+            font-family: "button-header-font";
+            background-color: #ad5454;
+            color: white;
+            margin-bottom: 10px;
+            padding: 10px 20px;
+            font-size: 12px;
+            cursor: pointer;
+            border: none;
+            border-radius: 20px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .page-title {
+            font-family: "h2-font";
+            color:#963b3b;
+            font-size: 30px;
+            text-align: center;
+            margin: 70px 0;
+        }
+
+        .centered-button {
+            background-color: transparent;
+            text-align: center;
+            margin-top: -40px;
+            background-image: url('./images/button-title.png');
+            background-size: cover; 
+            background-position: center;
+            height: 160px;
+            width: 200px;
+            border: none;
+            position: relative;
+        }
+        
+
+        .button-content {    
+            color: #ad2020;
+            position: absolute;
+            top: 68%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center; /* Center text horizontally */
+            font-family: "h2-font";
+            font-size: 18px;
+            
+        }
+
+        .container-title {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+        .image-placeholder {
+            width: 80%;
+            display: flex;
+            max-width: 300px;
+            margin: 10px;
+            border: 1px solid #ccc; /* Placeholder border, remove in production */
+            /* Add additional styling for the image container as needed */
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .image-placeholder img{
+            width: 160px;
+        }
+
+        .image-placeholder p{
+            font-family: "p-grid-font";
+            font-size: 18px;
+            margin-top: 25px;
+            margin-right: 3px;
+        }
+
+        /* Media query for responsiveness */
+        @media screen and (min-width: 600px) {
+            .main-header {
+                flex-wrap: nowrap;
+            }
+
+            .logo-placeholder {
+                margin-bottom: 0;
+            }
+
+            .buttons {
+                margin-top: 0;
+            }
+
+            .signup-btn, .signin-btn {
+                margin-bottom: 0;
+                margin-left: 10px;
+            }
+
+            .page-tittle{
+                font-size: 20px;
+            }
+        }
+    </style>
     <title>Task List</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body>
-    <div class="header">
-        <h1>Task List</h1>
-        <img src="./images/header-icon.png">
-        <div class="button-sign">
-            <button class="button-sign-custom">Sign up</button>
-            <button class="button-sign-custom">Sign in</button>
-        </div>
-    </div>
-      
-    <div class="container-title">
-        <h2>
-            Turn Your To-Dos into Ta-Da's: <br>
-            Supercharge your productivity with this Task Plataform!
-        </h2>
 
-        <button class="button-title-custom">
-            <span class="button-content">Start</span>
-        </button>
-    </div>
-
-    <div class="container">
-        <div class="parent">
-            <div class="div1">
-                <img src="./images/home-img1.png">
-                <p>Simply add, edit and remove tasks</p>
-            </div>
-            <div class="div2">
-                <img src="./images/home-img2.png">
-                <p>Control tasks through a calendar and see what's done </p>
-            </div>
-            <div class="div3">
-                <img src="./images/home-img3.png">
-                <p>Be alerted when any task is due</p>
-            </div>
+    <header class="main-header">
+        <div class="logo-placeholder"><h1>Task List</h1><img src="./images/header-icon.png" width="55px" height="57px"></div>
+        <div class="buttons">
+            <button class="signup-btn">Sign Up</button>
+            <button class="signin-btn">Sign In</button>
         </div>
+    </header>
+
+    <h2 class="page-title">Turn Your To-Dos into Ta-Da's: <br>
+        Supercharge your productivity with this Task Plataform!</h2>
+
+        <div class="container-title">
+            <button class="centered-button">
+                <span class="button-content">Start</span>
+            </button>
+        </div>
+    <div class="image-container">
+        <div class="image-placeholder"><img src="./images/home-img1.png"><p>Simply add, edit and remove tasks</p></div>
+        <div class="image-placeholder"><img src="./images/home-img2.png"><p>Manage tasks through a calendar and track progress</p></div>
+        <div class="image-placeholder"><img src="./images/home-img3.png"><p>Be alerted when any task is due</p></div>
     </div>
-    <script>
-        // JavaScript code for introduction
-        alert('Hello, this is a simple JavaScript website!');
-    </script>
 
 </body>
 </html>
